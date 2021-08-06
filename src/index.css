@@ -1,13 +1,17 @@
 /* CSS Custom Properties */
 :root {
-  --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
-  --text-light: #968c84;
+  --text-light: rgba(230, 230, 230, 1);
   --text-dark: #615954;
+  --black: black;
+  --gray-1: rgb(20, 20, 30);
+  --gray-2: rgb(30, 30, 40);
+  --gray-3: rgb(40, 40, 50);
+  --gray-4: rgb(80, 80, 100);
+  --green-dark: rgb(20, 120, 20);
+  --green-light: rgb(30, 180, 30);
+  --purple-dark: rgb(100, 20, 100);
+  --purple-light: rgb(150, 30, 150);
+  --crimson: rgb(120, 20, 50);
 }
 
 *, *:before, *:after {
@@ -21,9 +25,10 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background-color: var(--gray-4);
   padding: 2vmin;
   height: 100vh;
+  color: var(--white);
 }
 
 code {
@@ -69,9 +74,9 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--tan-1);
-  color: var(--text-dark);
-  border: .1vmin solid var(--tan-3);
+  background-color: var(--gray-1);
+  color: var(--text-light);
+  border: .1vmin solid var(--gray-3);
   border-radius: 1vmin;
   padding: .6vmin;
   text-align: center;
@@ -80,13 +85,13 @@ code {
 
 .form-container {
   padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: var(--gray-1);
+  border: .1vmin solid var(--gray-3);
   border-radius: 1vmin;
 }
 
 p.error-message {
-  color: var(--orange);
+  color: var(--purple-dark);
   text-align: center;
 }
 
@@ -106,30 +111,35 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid var(--gray-3);
   border-radius: .5vmin;
-  color: var(--text-dark);
+  color: var(--text-light);
   background-image: none !important; /* prevent lastpass */
   outline: none;
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: var(--purple-dark);
 }
 
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
-  color: var(--white);
-  background-color: var(--orange);
+  color: var(--green-light);
+  background-color: var(--purple-dark);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
+  border: .1vmin solid var(--gray-2);
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
+}
+
+button:hover, a.button:hover {
+  color: var(--green-light);
+  background-color: var(--purple-light);
 }
 
 button.btn-sm {
@@ -144,7 +154,7 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: var(--crimson);
 }
 
 button[type="submit"] {

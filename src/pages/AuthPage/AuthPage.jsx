@@ -8,9 +8,15 @@ export default function AuthPage({ setUser }) {
 
   return (
     <main>
-      <h1>AuthPage</h1>
-      <button onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'Sign Up': 'Log In'}</button>
-      {showLogin ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
+      <div>
+        <h1>Welcome to the Pokemon EV Tracker</h1>
+        <p>To access EV tracking features, please sign in.</p>
+        {showLogin ? <LoginForm setUser={setUser} /> : <SignUpForm setUser={setUser} />}
+      </div>
+      <div>
+        <p>If you don't have an account, sign up here.</p>
+        <button onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'Sign Up': 'Log In'}</button>
+      </div>
     </main>
   );
 }
