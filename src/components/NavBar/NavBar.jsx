@@ -11,11 +11,11 @@ export default function NavBar(props) {
 
     return (
     <nav>
-        <Link to="/home">Home</Link>
-        &nbsp; | &nbsp;
-        <Link to="/national_index">National Dex</Link>
-        &nbsp;&nbsp;<span>Welcome, {props.user.name}</span>
-        &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
+        <Link to="/home">Home</Link> &nbsp; | &nbsp;
+        <Link to="/national_index">National Dex</Link> &nbsp; | &nbsp;
+        <Link to="/pokemon_bank">Pokemon Bank</Link> &nbsp; | &nbsp;
+        <Link to="/about">About</Link> &nbsp; | &nbsp;
+        <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
     );
 }
