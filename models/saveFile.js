@@ -2,7 +2,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const pokemonSchema = newSchema({
-    species: {type: String, required: true},
+    dexNo: {
+        type: Number,
+        min: 1,
+        max: 807,
+        required: true,
+        default: 25,
+    },
     nickname: String,
     level: {
         type: Number,

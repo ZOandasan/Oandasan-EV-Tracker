@@ -3,7 +3,6 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
-import LandingPage from '../LandingPage/LandingPage';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import NationalDex from '../NationalDexPage/NationalDexPage'
@@ -36,7 +35,6 @@ export default function App() {
         </>
         :
         <>
-          <LandingPage />
           <AuthPage setUser={setUser} />
         </>
       }
