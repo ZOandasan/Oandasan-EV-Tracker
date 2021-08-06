@@ -1,9 +1,26 @@
-### To Use This:
+# Oandasan EV Tracker
 
-1) Clone the mern-infrastructure repo.
-2) Rename the newly mern-infrastructure folder to the name of your new project.
-3) Optionally, update the "name": "mern-infrastructure" in package.json.
-4) Create a new repo on your personal GH account.
-5) Copy the GH repo's URL.
-6) Update the remote's URL: git remote set-url origin <paste the copied url>
-7) Push for the first time: git push -u origin main
+### Site Functionality
+I wanted to create a site where people could track the pokemon in their pokemon games, showing the pokemon that you have caught and a way to track the growth of the pokemon. This is primarily through the user tracking the EVs that a given pokemon has gained, but also noting its nature, and its level.
+
+To accomplish this, I used the pokemon API to grab the existing data the pokemon company has. This allows me to  show all the pokemon in the national dex, as well as provide accurate pokemon species, types, abilities, movesets, and sprites.
+### Link to the Site:
+
+
+### Technologies Used:
+HTML, CSS, Javascript, MongoDB, Mongoose, Express, React.js, Node.js, Pokemon API, Heroku, Github
+
+### Trello Board:
+https://trello.com/b/ocCq4kVK/oandasan-ev-tracker
+
+### Next Steps:
+<ul>
+    <li>Add</li>
+    <li>Add</li>
+    <li>Add</li>
+</ul>
+
+### ERD:
+<td> <img src="https://i.imgur.com/9abTOJO.png" width:"450"> </td>
+
+### Screenshots:
