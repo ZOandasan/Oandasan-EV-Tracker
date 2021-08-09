@@ -18,14 +18,17 @@ export default function NewSaveForm ({setShowForm}) {
     async function handleSubmit (evt) {
       evt.preventDefault();
       try {
-        const formData = {...this.state};
-        const saveData = await createSave(formData);
+        console.log('IN_TRY');
+        const formInfo = {...formData};
+        const saveData = await createSave(formInfo);
         setShowForm(false);
+        console.log(saveData);
+
         //Use the saveData to get an ID, and then render the Details Page.
         //(History.push)
       } catch {
         // An error occurred
-        this.setState({ error: 'Submission Failed - Try Again'});
+        setFormData({ error: 'Submission Failed - Try Again'});
       }
     };
   
@@ -65,7 +68,7 @@ export default function NewSaveForm ({setShowForm}) {
                 <option value="true">True</option>
             </select>
 
-            <button type="submit">Create New Save</button>
+            <input type="submit" value="Create New Save" />
         </form>
         </div>
     </div>

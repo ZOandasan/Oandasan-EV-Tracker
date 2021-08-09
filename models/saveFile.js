@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const pokemonSchema = newSchema({
+const pokemonSchema = new Schema({
     dexNo: {
         type: Number,
         min: 1,
@@ -76,14 +76,6 @@ const saveFileSchema = new Schema({
 }, {
     timestamps: true
 });
-
-saveFileSchema.statics.addSave = function(userId) {
-    return this.findOneAndUpdate(
-        { user: userId },
-        { user: userId },
-        { upsert: true, new: true }
-    )
-}
 
 
 module.exports = mongoose.model('saveFile', saveFileSchema);

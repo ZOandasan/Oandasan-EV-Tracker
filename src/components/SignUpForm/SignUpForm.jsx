@@ -26,13 +26,13 @@ export default function SignUpForm({ setUser }) {
     try {
       // We don't want to send the 'error' or the 
       // 'confirm state properties
-      const formData = {...this.state};
-      delete formData.error;
-      delete formData.confirm;
+      const formInfo = {...formData};
+      delete formInfo.error;
+      delete formInfo.confirm;
       // The promise returned by the signUp service methods
       // will resolve to the user object included in the
       // payload of the JSON Web Token
-      const user = await signUp(formData);
+      const user = await signUp(formInfo);
       // Baby step
       setUser(user);
     } catch {

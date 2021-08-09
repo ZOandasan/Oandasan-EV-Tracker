@@ -5,7 +5,10 @@ module.exports = {
 };
 
 async function createSave(req, res){
-    const saveFile = await SaveFile.addSave(req.user._id);
-    await saveFile.save();
+    req.body.user = req.user._id;
+    for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key];
+    }
+    const saveFile = await SaveFile.create(req.body);
     res.json(saveFile);
 }
