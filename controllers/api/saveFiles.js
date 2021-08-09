@@ -2,6 +2,7 @@ const SaveFile = require('../../models/saveFile');
 
 module.exports = {
     createSave,
+    history,
 };
 
 async function createSave(req, res){
@@ -11,4 +12,10 @@ async function createSave(req, res){
     }
     const saveFile = await SaveFile.create(req.body);
     res.json(saveFile);
+}
+
+async function history(req, res){
+    const saveFiles = await SaveFile
+        .find({ user: req.user._id })
+    res.json(saveFiles);
 }
