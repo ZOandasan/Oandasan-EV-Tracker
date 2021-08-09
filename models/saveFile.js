@@ -63,8 +63,7 @@ const saveFileSchema = new Schema({
     },
     generation: {
         type: Number,
-        min: 1,
-        max: 7,
+        enum: [1, 2, 3, 4, 5, 6, 7],
         default: 1,
     },
     isNuzlock: {
@@ -77,5 +76,14 @@ const saveFileSchema = new Schema({
 }, {
     timestamps: true
 });
+
+saveFileSchema.statics.addSave = function(userId) {
+    return this.findOneAndUpdate(
+        { user: userId },
+        { user: userId },
+        { upsert: true, new: true }
+    )
+}
+
 
 module.exports = mongoose.model('saveFile', saveFileSchema);
