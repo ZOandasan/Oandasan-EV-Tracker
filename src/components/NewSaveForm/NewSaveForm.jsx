@@ -68,7 +68,8 @@ export default function NewSaveForm ({setShowForm}) {
                 <option value="true">True</option>
             </select>
 
-            <input type="submit" value="Create New Save" />
+            <button type="submit">Create New Save</button>
+            <button onClick={()=> setShowForm(false)}>Cancel</button>
         </form>
         </div>
     </div>
