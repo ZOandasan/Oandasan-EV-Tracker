@@ -4,6 +4,7 @@ import './App.css';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import HomePage from '../HomePage/HomePage';
 import NationalDex from '../NationalDexPage/NationalDexPage'
 import PokemonBankPage from '../PokemonBankPage/PokemonBankPage';
@@ -32,6 +33,7 @@ export default function App() {
             </Route>
             <Redirect to="/home" />
           </Switch>
+          <Footer />
         </>
         :
         <>

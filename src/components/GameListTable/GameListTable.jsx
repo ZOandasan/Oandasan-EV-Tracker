@@ -1,7 +1,7 @@
 import GameTableItem from '../GameTableItem/GameTableItem';
 
 export default function GameListTable({saveFiles, selected, changeSelected}){
-    const gameTableItem = saveFiles.map((s, idx) => <GameTableItem  saveFile={s} key={idx} selected={selected} changeSelected={changeSelected}/>)
+    const gameTableItem = saveFiles.map((s, idx) => <GameTableItem  index={idx+1} saveFile={s} key={idx} selected={selected} changeSelected={changeSelected}/>)
 
     return (
         <>

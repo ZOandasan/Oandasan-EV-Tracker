@@ -7,7 +7,7 @@ import GameListTable from '../../components/GameListTable/GameListTable';
 export default function HomePage({user}) {
   const [showForm, setShowForm] = useState(false);
   const [savedGames, setSavedGames] = useState([]);
-  const [selected, setSelected] = useState("white");
+  const [selected, setSelected] = useState(0);
     
     useEffect(function() {
         async function getSavedGames() {
