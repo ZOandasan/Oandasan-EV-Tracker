@@ -33,7 +33,7 @@ export default function HomePage({user}) {
         <h1>New Save</h1>
         <NewSaveForm setShowForm={setShowForm} />
       </div> 
-      :
+    :
       <div>
         <h1>Home Page</h1>
         <span>Welcome, {user.name}</span>
