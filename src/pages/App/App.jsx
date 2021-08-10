@@ -9,6 +9,8 @@ import HomePage from '../HomePage/HomePage';
 import NationalDex from '../NationalDexPage/NationalDexPage'
 import PokemonBankPage from '../PokemonBankPage/PokemonBankPage';
 import AboutEVTracker from '../AboutEVTrackerPage/AboutEVTrackerPage';
+import SettingsPage from '../SettingsPage/SettingsPage';
+import AccountPage from '../AccountPage/AccountPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -30,6 +32,12 @@ export default function App() {
             </Route>
             <Route path="/about">
               <AboutEVTracker />
+            </Route>
+            <Route path="/settings">
+              <SettingsPage />
+            </Route>
+            <Route path="/account">
+              <AccountPage user={user}/>
             </Route>
             <Redirect to="/home" />
           </Switch>

@@ -16,6 +16,8 @@ export default function NavBar(props) {
         <Link to="/national_index">National Dex</Link> &nbsp; | &nbsp;
         <Link to="/pokemon_bank">Pokemon Bank</Link> &nbsp; | &nbsp;
         <Link to="/about">About</Link> &nbsp; | &nbsp;
+        <Link to="/settings">Settings</Link> &nbsp; | &nbsp;
+        <Link to="/account">Account</Link> &nbsp; | &nbsp;
         <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
     );
