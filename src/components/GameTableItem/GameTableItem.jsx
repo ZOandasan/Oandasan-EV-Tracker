@@ -14,8 +14,8 @@ export default function GameTableItem({ saveFile, selected, changeSelected, inde
     } else {
         return (
             <div
-            className="GameTableItem" 
-            onClick={() => changeSelected(saveFile._Id)}>
+            className="GameTableItem"
+            onClick={() => changeSelected(index)}>
                 <GameTableItemCard saveFile={saveFile} region={saveFile.region} generation={saveFile.generation} nuzlock={saveFile.isNuzlock}/>
             </div>
         );

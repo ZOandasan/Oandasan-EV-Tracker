@@ -4,12 +4,12 @@ export default function GameTableItemCard({region, generation, nuzlock, saveFile
             {nuzlock ? 
                 <>
                     <div>Nuzlock of Game in {region}, Gen {generation}</div>
-                    <a href="">Number of Pokemon Caught: {saveFile.pokemon.length}</a>
+                    <button>Number of Pokemon Caught: {saveFile.pokemon.length}</button>
                 </> 
                 :
                 <>
                     <div>Game in {region}, Gen {generation}</div>
-                    <a href="">Number of Pokemon Caught: {saveFile.pokemon.length}</a>
+                    <button>Number of Pokemon Caught: {saveFile.pokemon.length}</button>
                 </>
             }
         </>

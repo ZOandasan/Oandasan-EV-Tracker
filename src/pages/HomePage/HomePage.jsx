@@ -17,9 +17,11 @@ export default function HomePage({user}) {
         getSavedGames();
     }, []);
 
-    function changeSelected(order) {
-      if (order !== selected) {
-      setSelected(order);
+    function changeSelected(index) {
+      if (index !== selected) {
+        setSelected(index);
+      } else {
+        setSelected(0);
       }
     }
 
