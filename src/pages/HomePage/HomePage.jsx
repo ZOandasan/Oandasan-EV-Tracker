@@ -1,4 +1,4 @@
-import * as userService from '../../utilities/users-service';
+//import * as userService from '../../utilities/users-service';
 import * as saveFilesAPI from '../../utilities/save-files-api'
 import { useState, useEffect } from "react";
 import NewSaveForm from '../../components/NewSaveForm/NewSaveForm';
@@ -7,6 +7,7 @@ import GameListTable from '../../components/GameListTable/GameListTable';
 export default function HomePage({user}) {
   const [showForm, setShowForm] = useState(false);
   const [savedGames, setSavedGames] = useState([]);
+  const [selected, setSelected] = useState("white");
     
     useEffect(function() {
         async function getSavedGames() {
@@ -15,6 +16,12 @@ export default function HomePage({user}) {
         }
         getSavedGames();
     }, []);
+
+    function changeSelected(order) {
+      if (order !== selected) {
+      setSelected(order);
+      }
+    }
 
 
   return (
@@ -33,7 +40,7 @@ export default function HomePage({user}) {
           <button>Delete Existing Save</button>
         </div>
         <div>
-          <GameListTable />
+          <GameListTable saveFiles={savedGames} selected={selected} changeSelected={changeSelected}/>
         </div>
       </div>
     }
