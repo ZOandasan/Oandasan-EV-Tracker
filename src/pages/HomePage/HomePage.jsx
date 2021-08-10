@@ -31,7 +31,7 @@ export default function HomePage({user}) {
     {showForm ? 
       <div>
         <h1>New Save</h1>
-        <NewSaveForm setShowForm={setShowForm} />
+        <NewSaveForm savedGames={savedGames} setSavedGames={setSavedGames} setShowForm={setShowForm} />
       </div> 
     :
       <div>

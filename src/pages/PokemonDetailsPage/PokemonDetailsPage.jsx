@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import * as saveFilesAPI from '../../utilities/save-files-api'
 export default function PokemonDetailsPage() {
-
-    const [thisSave, setThisSave] = useState(null)
+    const [showForm, setShowForm] = useState(false);
+    const [thisSave, setThisSave] = useState({})
     const {id} = useParams();
     
     useEffect(function() {
@@ -21,10 +21,22 @@ export default function PokemonDetailsPage() {
     
     return (
         <>
+        {showForm ?
+            <>
+                <h1>New Pokemon Form</h1>
+                <button onClick={() => setShowForm(false)}>Cancel</button>
+            </>
+        :
             <div>
-                <p>Region: {thisSave.region} | Gen: {thisSave.generation} | Nuzlock: {nuzlock}</p>
+                <h2>Region: {thisSave.region} | Gen: {thisSave.generation} | Nuzlock: {nuzlock}</h2>
+                <div>
+                    <button onClick={() => setShowForm(true)}>New Pokemon</button>
+                    <button>Delete Pokemon</button>
+                </div>
+                <div>Table of Pokemon Here</div>
             </div>
-            
+        }
+
         </>
     )
 }

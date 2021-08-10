@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createSave } from '../../utilities/save-files-api'
 
-export default function NewSaveForm ({setShowForm}) {
+export default function NewSaveForm ({setShowForm, setSavedGames, savedGames}) {
     const [formData, setFormData] = useState({
       region: '',
       generation: '',
@@ -14,6 +14,7 @@ export default function NewSaveForm ({setShowForm}) {
         [evt.target.name]: evt.target.value
       });
     };
+
   
     async function handleSubmit (evt) {
       evt.preventDefault();
@@ -22,12 +23,8 @@ export default function NewSaveForm ({setShowForm}) {
         const formInfo = {...formData};
         const saveData = await createSave(formInfo);
         setShowForm(false);
-        console.log(saveData);
-
-        //Use the saveData to get an ID, and then render the Details Page.
-        //(History.push)
+        setSavedGames([...savedGames, saveData]);
       } catch {
-        // An error occurred
         setFormData({ error: 'Submission Failed - Try Again'});
       }
     };
