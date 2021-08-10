@@ -1,4 +1,6 @@
 import PokemonBankTable from "../../components/PokemonBankTable/PokemonBankTable";
+import { useState, useEffect } from "react";
+import * as saveFilesAPI from '../../utilities/save-files-api'
 export default function PokemonBankPage() {
     const [savedGames, setSavedGames] = useState([]);
   

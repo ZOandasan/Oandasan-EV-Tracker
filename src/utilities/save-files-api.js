@@ -9,3 +9,7 @@ export async function createSave(data) {
 export async function getAll() {
     return sendRequest(`${BASE_URL}/history`, 'POST')
 }
+
+export async function getOne(id) {
+    return sendRequest(`${BASE_URL}/${id}`, 'POST')
+}

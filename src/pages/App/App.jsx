@@ -11,6 +11,7 @@ import PokemonBankPage from '../PokemonBankPage/PokemonBankPage';
 import AboutEVTracker from '../AboutEVTrackerPage/AboutEVTrackerPage';
 import SettingsPage from '../SettingsPage/SettingsPage';
 import AccountPage from '../AccountPage/AccountPage';
+import PokemonDetailsPage from '../PokemonDetailsPage/PokemonDetailsPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -38,6 +39,9 @@ export default function App() {
             </Route>
             <Route path="/account">
               <AccountPage user={user}/>
+            </Route>
+            <Route path="/details/:id">
+              <PokemonDetailsPage />
             </Route>
             <Redirect to="/home" />
           </Switch>

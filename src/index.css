@@ -117,7 +117,7 @@ input {
   border: .1vmin solid var(--gray-3);
   border-radius: .5vmin;
   color: var(--text-light);
-  background-image: none !important; /* prevent lastpass */
+  background-image: none !important;
   outline: none;
 }
 
