@@ -13,3 +13,7 @@ export async function getAll() {
 export async function getOne(id) {
     return sendRequest(`${BASE_URL}/${id}`, 'POST')
 }
+
+export async function deleteOne(id) {
+    return sendRequest(`${BASE_URL}/delete/${id}`, 'DELETE')
+}

@@ -4,6 +4,7 @@ module.exports = {
     createSave,
     showAll,
     showOne,
+    deleteOne,
 };
 
 async function createSave(req, res){
@@ -23,5 +24,10 @@ async function showAll(req, res){
 
 async function showOne(req, res){
     const saveFile = await SaveFile.findById(req.params.id)
-    res.json(saveFile)    
+    res.json(saveFile);
+}
+
+async function deleteOne(req, res){
+    const saveFile = await SaveFile.findOneAndDelete( {_id: req.params.id } )
+    res.json('Game Deleted');
 }

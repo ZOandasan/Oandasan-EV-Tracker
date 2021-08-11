@@ -18,9 +18,13 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Be sure to mount before routes
 app.use(require('./config/checkToken'));
 
+
+
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/saveFiles', require('./routes/api/saveFiles'));
+const ensureLoggedIn = require('./config/ensureLoggedIn')
+app.use('/api/saveFiles', ensureLoggedIn, require('./routes/api/saveFiles'));
+
 
 
 // The following "catch all" route (note the *) is necessary
