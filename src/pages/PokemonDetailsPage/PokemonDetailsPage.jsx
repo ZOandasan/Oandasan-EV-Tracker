@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import * as saveFilesAPI from '../../utilities/save-files-api'
 import NewPokemonForm from "../../components/NewPokemonForm/NewPokemonForm";
+import PokemonTable from "../../components/PokemonTable/PokemonTable";
 
 export default function PokemonDetailsPage() {
     const [showForm, setShowForm] = useState(false);
@@ -14,6 +15,7 @@ export default function PokemonDetailsPage() {
             const gameSave = await saveFilesAPI.getOne(id);
             setThisSave(gameSave);
             setSavedPokemon(gameSave.pokemon);
+            console.log('Pokemon Data:', gameSave.pokemon )
         }
         getSave();
     }, []);
@@ -38,7 +40,7 @@ export default function PokemonDetailsPage() {
                     <button onClick={() => setShowForm(true)}>New Pokemon</button>
                     <button>Delete Pokemon</button>
                 </div>
-                <div>Table of Pokemon Here</div>
+                <PokemonTable pokeArray={savedPokemon} pokemonBank={false}/>
             </div>
         }
 
