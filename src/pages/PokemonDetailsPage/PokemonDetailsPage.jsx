@@ -28,7 +28,7 @@ export default function PokemonDetailsPage() {
         {showForm ?
             <>
                 <h1>New Pokemon Form</h1>
-                <NewPokemonForm savedPokemon={savedPokemon} setSavedPokemon={setSavedPokemon}/>
+                <NewPokemonForm savedPokemon={savedPokemon} setSavedPokemon={setSavedPokemon} id={thisSave._id} setShowForm={setShowForm}/>
                 <button onClick={() => setShowForm(false)}>Cancel</button>
             </>
         :

@@ -173,3 +173,6 @@ a:visited {
   color: var(--yellow-light);
 }
 
+input {
+  color: black;
+}
