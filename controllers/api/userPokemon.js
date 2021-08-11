@@ -5,5 +5,8 @@ module.exports = {
 };
 
 async function create(req, res){
-    
+    const saveFile = await SaveFile.findById(req.params.id)
+    saveFile.pokemon.push(req.body);
+    await saveFile.save();
+    res.json(saveFile);
 }

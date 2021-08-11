@@ -1,6 +1,6 @@
 export default function PokemonBankPokemonCard({pokemon}){
     return ( 
-        <>  
+        <div>  
             {pokemon.nickname ? 
                 <div>
                     <h4>{pokemon.dexNo}: {pokemon.nickname}</h4>
@@ -12,6 +12,6 @@ export default function PokemonBankPokemonCard({pokemon}){
                     <p>Level: {pokemon.level}</p>
                 </div>
             }
-        </>
+        </div>
     );
 } 
