@@ -38,7 +38,7 @@ export default function PokemonDetailsPage() {
                 <div>
                     <button onClick={() => setShowForm(true)}>New Pokemon</button>
                 </div>
-                <PokemonTable pokeArray={savedPokemon} pokemonBank={false}/>
+                <PokemonTable pokeArray={savedPokemon} pokemonBank={false} saveId={thisSave._id} setSavedPokemon={setSavedPokemon}/>
             </div>
         }
 

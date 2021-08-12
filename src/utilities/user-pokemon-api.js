@@ -9,3 +9,7 @@ export async function createPokemon(data, saveId) {
 export async function deletePokemon(saveId, pokeId) {
     return sendRequest(`${BASE_URL}/${saveId}/pokemon/delete/${pokeId}`, 'DELETE');
 }
+
+export async function updatePokemonEV(data, saveId, pokeId){
+    return sendRequest(`${BASE_URL}/${saveId}/pokemon/update/${pokeId}`, 'UPDATE');
+}

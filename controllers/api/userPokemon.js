@@ -13,5 +13,8 @@ async function create(req, res){
 }
 
 async function deleteOne(req, res){
-    
+    const saveFile = await SaveFile.findOne( {_id: req.params.saveId } )
+    saveFile.pokemon.remove(req.params.pokeId);
+    await saveFile.save();
+    res.json(saveFile);
 }

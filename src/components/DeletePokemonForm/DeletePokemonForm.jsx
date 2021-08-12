@@ -1,13 +1,12 @@
 import * as UPokemonApi from '../../utilities/user-pokemon-api';
 
-export default function DeletePokemonForm({saveId, pokemonId, setShowForm, setSavedPokemon, savedPokemon}) {
+export default function DeletePokemonForm({saveId, pokeId, setShowForm, setSavedPokemon, savedPokemon}) {
 
   async function handleDelete(evt) {
     evt.preventDefault();
-    const deletePokemon = await UPokemonApi.deletePokemon(saveId, pokemonId);
+    const updatedSave = await UPokemonApi.deletePokemon(saveId, pokeId);
     setShowForm(false);
-    let updatedPokemon = savedPokemon.filter(p => p._id !== pokemonId);
-    setSavedPokemon(updatedPokemon); 
+    setSavedPokemon(updatedSave.pokemon); 
   }
 
   return (

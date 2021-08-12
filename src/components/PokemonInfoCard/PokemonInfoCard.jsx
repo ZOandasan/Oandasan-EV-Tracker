@@ -3,7 +3,7 @@ import PokemonEVDetail from '../PokemonEVDetail/PokemonEVDetail';
 import DeletePokemonForm from '../DeletePokemonForm/DeletePokemonForm';
 import {useState} from 'react';
 
-export default function PokemonInfoCard({pokemon}){
+export default function PokemonInfoCard({pokemon, saveId, setSavedPokemon}){
     const [openDetails, setOpenDetails] = useState(false);
     const [showDelete, setShowDelete] = useState(false);
 
@@ -11,11 +11,10 @@ export default function PokemonInfoCard({pokemon}){
     if (showDelete){
         return (
         <>
-            <DeletePokemonForm setShowForm={setShowDelete}/>
+            <DeletePokemonForm setShowForm={setShowDelete} saveId={saveId} pokeId={pokemon._id} setSavedPokemon={setSavedPokemon}/>
             <button onClick={() => setShowDelete(false)}>Cancel</button>
         </>
         );
-
     } else if (pokemon.nickname){
         return (
             <div className="pokemon-card">
