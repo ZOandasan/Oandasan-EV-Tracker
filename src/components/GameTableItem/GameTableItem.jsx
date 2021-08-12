@@ -1,13 +1,13 @@
 import GameTableItemCard from '../GameTableItemCard/GameTableItemCard'
 import './GameTableItem.css';
 
-export default function GameTableItem({ saveFile, selected, changeSelected, index }){
-    if(selected === index) {
+export default function GameTableItem({ saveFile, selected, changeSelected }){
+    if(selected === saveFile._id) {
         return (
             <div
             className="GameTableItem" 
             style={{border:" 3px solid white"}}
-            onClick={() => changeSelected(index)}>
+            onClick={() => changeSelected(saveFile._id)}>
                 <GameTableItemCard saveFile={saveFile} region={saveFile.region} generation={saveFile.generation} nuzlock={saveFile.isNuzlock}/>
             </div>
         );
@@ -15,7 +15,7 @@ export default function GameTableItem({ saveFile, selected, changeSelected, inde
         return (
             <div
             className="GameTableItem"
-            onClick={() => changeSelected(index)}>
+            onClick={() => changeSelected(saveFile._id)}>
                 <GameTableItemCard saveFile={saveFile} region={saveFile.region} generation={saveFile.generation} nuzlock={saveFile.isNuzlock}/>
             </div>
         );

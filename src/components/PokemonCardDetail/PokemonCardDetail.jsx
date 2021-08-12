@@ -1,4 +1,7 @@
 export default function PokemonCardDetail({pokemon}){
+    
+
+
     return (
     <>
         <div>
