@@ -2,6 +2,7 @@ const SaveFile = require('../../models/saveFile');
 
 module.exports = {
     create,
+    deleteOne,
 };
 
 async function create(req, res){
@@ -9,4 +10,8 @@ async function create(req, res){
     saveFile.pokemon.push(req.body);
     await saveFile.save();
     res.json(saveFile);
+}
+
+async function deleteOne(req, res){
+    
 }

@@ -4,7 +4,7 @@ export default function DeleteSaveForm({id, setShowForm, setSavedGames, savedGam
 
   async function handleDelete(evt) {
     evt.preventDefault();
-    const deleteLocation = await savesApi.deleteOne(id);
+    const deleteSave = await savesApi.deleteOne(id);
     setShowForm(false);
     let updatedSaves = savedGames.filter(s => s._id !== id);
     setSavedGames(updatedSaves); 
@@ -13,7 +13,7 @@ export default function DeleteSaveForm({id, setShowForm, setSavedGames, savedGam
   return (
     <div className="form-container">
       <form autoComplete="off" onSubmit={handleDelete}>
-        <label>Are you sure you want to DELETE?</label>
+        <p>Are you sure you want to DELETE?</p>
         <button type="submit">Delete</button>
         <button onClick={() => setShowForm(false)}>Cancel</button>
       </form>

@@ -8,6 +8,7 @@ router.post('/history', saveFilesCtrl.showAll);
 router.post('/:id', saveFilesCtrl.showOne);
 router.delete('/delete/:id', saveFilesCtrl.deleteOne);
 router.post('/:id/pokemon/create', pokemonCtrl.create);
+router.delete('/:id/pokemon/delete/:id', pokemonCtrl.deleteOne);
 
 
 module.exports = router;

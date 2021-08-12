@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createPokemon } from '../../utilities/user-pokemon-api'
 
-export default function NewPokemonForm ({setSavedPokemon, savedPokemon, setShowForm, id}) {
+export default function NewPokemonForm ({setSavedPokemon, savedPokemon, setShowForm, saveId}) {
     const [formData, setFormData] = useState({
         dexNo: '',
         nickname: '',
@@ -20,9 +20,9 @@ export default function NewPokemonForm ({setSavedPokemon, savedPokemon, setShowF
       evt.preventDefault();
       try {
         const formInfo = {...formData};
-        const saveData = await createPokemon(formInfo, id);
-        setSavedPokemon([...savedPokemon, saveData]);
+        const saveData = await createPokemon(formInfo, saveId);
         setShowForm(false);
+        setSavedPokemon([...savedPokemon, saveData]);
       } catch {
         setFormData({ error: 'Submission Failed - Try Again'});
       }

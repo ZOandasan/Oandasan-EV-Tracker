@@ -15,7 +15,6 @@ export default function PokemonDetailsPage() {
             const gameSave = await saveFilesAPI.getOne(id);
             setThisSave(gameSave);
             setSavedPokemon(gameSave.pokemon);
-            console.log('Pokemon Data:', gameSave.pokemon )
         }
         getSave();
     }, []);
@@ -30,7 +29,7 @@ export default function PokemonDetailsPage() {
         {showForm ?
             <>
                 <h1>New Pokemon Form</h1>
-                <NewPokemonForm savedPokemon={savedPokemon} setSavedPokemon={setSavedPokemon} id={thisSave._id} setShowForm={setShowForm}/>
+                <NewPokemonForm savedPokemon={savedPokemon} setSavedPokemon={setSavedPokemon} saveId={thisSave._id} setShowForm={setShowForm}/>
                 <button onClick={() => setShowForm(false)}>Cancel</button>
             </>
         :
@@ -38,7 +37,6 @@ export default function PokemonDetailsPage() {
                 <h2>Region: {thisSave.region} | Gen: {thisSave.generation} | Nuzlock: {nuzlock}</h2>
                 <div>
                     <button onClick={() => setShowForm(true)}>New Pokemon</button>
-                    <button>Delete Pokemon</button>
                 </div>
                 <PokemonTable pokeArray={savedPokemon} pokemonBank={false}/>
             </div>

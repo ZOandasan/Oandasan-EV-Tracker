@@ -19,7 +19,6 @@ export default function NewSaveForm ({setShowForm, setSavedGames, savedGames}) {
     async function handleSubmit (evt) {
       evt.preventDefault();
       try {
-        console.log('IN_TRY');
         const formInfo = {...formData};
         const saveData = await createSave(formInfo);
         setShowForm(false);
@@ -29,10 +28,6 @@ export default function NewSaveForm ({setShowForm, setSavedGames, savedGames}) {
       }
     };
   
-    // Must override the render method
-    // The render method takes the place of 
-    // a function component, in that its job
-    // is to return the UI as JSX
     return (
     <div>
         <div className="form-container">
