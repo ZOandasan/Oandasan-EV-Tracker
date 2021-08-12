@@ -32,6 +32,7 @@ export default function HomePage({user}) {
         <div>
           <h1>New Save</h1>
           <NewSaveForm savedGames={savedGames} setSavedGames={setSavedGames} setShowForm={setShowCreateForm} />
+          <button onClick={()=> setShowCreateForm(false)}>Cancel</button>
         </div>
       )
     } else if (showDeleteForm && selected) {

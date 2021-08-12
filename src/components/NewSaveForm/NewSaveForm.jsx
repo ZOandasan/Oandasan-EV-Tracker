@@ -61,7 +61,6 @@ export default function NewSaveForm ({setShowForm, setSavedGames, savedGames}) {
             </select>
 
             <button type="submit">Create New Save</button>
-            <button onClick={()=> setShowForm(false)}>Cancel</button>
         </form>
         </div>
     </div>
