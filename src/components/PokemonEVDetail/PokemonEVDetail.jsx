@@ -20,78 +20,39 @@ export default function PokemonEVDetail({pokemon, saveId}){
             } else if( val > 0 ){
                 let newVal = 252 - EV;
                 setTotalEVs(totalEVs + newVal);
-                setEV(EV + val);
-                let newEV = EV + val;
-                updateEVTotal(newEV, EVString);
+                setEV(252);
+                updateEVTotal(252, EVString);
+            } else {
+                let newVal = (-val) + (EV + val);
+                setTotalEVs(totalEVs - newVal);
+                setEV(0);
+                updateEVTotal(0, EVString);
             }
         }
     }
 
     function changeHP(val){
-        if (totalEVs + val > -1 && totalEVs + val < 511){
-            if (hpEV + val > -1 && hpEV + val < 253){
-                setTotalEVs(totalEVs + val);
-                setHPEV(hpEV + val);
-                let newEV = hpEV + val;
-                updateEVTotal(newEV, 'hpEV');
-            } else if( val > 0 ){
-                let newVal = 252 - hpEV;
-                setTotalEVs(totalEVs + newVal);
-                setHPEV(hpEV + newVal);
-                let newEV = hpEV + newVal;
-                updateEVTotal(newEV, 'hpEV');
-            }
-        }
+        changeEV(val, hpEV, setHPEV, 'hpEV');
     }
+
     function changeAtk(val){
-        if (totalEVs + val > -1 && totalEVs + val < 511){
-            if (atkEV + val > -1 && atkEV + val < 253){
-                setTotalEVs(totalEVs + val);
-                setAtkEV(atkEV + val)
-                let newEV = atkEV + val;
-                updateEVTotal(newEV, 'atkEV');
-            }
-        }
+        changeEV(val, atkEV, setAtkEV, 'atkEV');
     }
+
     function changeDef(val){
-        if (totalEVs + val > -1 && totalEVs + val < 511){
-            if (defEV + val > -1 && defEV + val < 253){
-                setTotalEVs(totalEVs + val);
-                setDefEV(defEV + val)
-                let newEV = defEV + val;
-                updateEVTotal(newEV, 'defEV');
-            }
-        }
+        changeEV(val, defEV, setDefEV, 'defEV');
     }
+
     function changeSpAtk(val){
-        if (totalEVs + val > -1 && totalEVs + val < 511){
-            if (spatkEV + val > -1 && spatkEV + val < 253){
-                setTotalEVs(totalEVs + val);
-                setSpAtkEV(spatkEV + val)
-                let newEV = spatkEV + val;
-                updateEVTotal(newEV, 'spAtkEV');
-            }
-        }
+        changeEV(val, spatkEV, setSpAtkEV, 'spAtkEV');
     }
+
     function changeSpDef(val){
-        if (totalEVs + val > -1 && totalEVs + val < 511){
-            if (spdefEV + val > -1 && spdefEV + val < 253){
-                setTotalEVs(totalEVs + val);
-                setSpDefEV(spdefEV + val);
-                let newEV = spdefEV + val;
-                updateEVTotal(newEV, 'spDefEV');
-            }
-        }
+        changeEV(val, spdefEV, setSpDefEV, 'spDefEV');
     }
+
     function changeSpd(val){
-        if (totalEVs + val > -1 && totalEVs + val < 511){
-            if (spdEV + val > -1 && spdEV + val < 253){
-                setTotalEVs(totalEVs + val);
-                setSpdEV(spdEV + val)
-                let newEV = spdEV + val;
-                updateEVTotal(newEV, 'spdEV');
-            }
-        }
+        changeEV(val, spdEV, setSpdEV, 'spdEV');
     }
 
     async function updateEVTotal(value, stat){
