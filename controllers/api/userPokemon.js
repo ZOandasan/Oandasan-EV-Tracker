@@ -23,7 +23,7 @@ async function deleteOne(req, res){
 async function edit(req, res){
     const saveFile = await SaveFile.findOne( {_id: req.params.saveId } )
     const pokeInst = saveFile.pokemon.id(req.params.pokeId)
-    pokeInst[req.params.stat] += req.params.value;
+    pokeInst[req.params.stat] = req.params.value;
     await saveFile.save();
     res.json(saveFile);
 }
