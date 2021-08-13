@@ -12,22 +12,32 @@ export default function PokemonEVDetail({pokemon, saveId}){
 
     function changeEV(val, EV, setEV, EVString){
         if (totalEVs + val > -1 && totalEVs + val < 511){
-            if (EV + val > -1 && EV + val < 253){
-                setTotalEVs(totalEVs + val);
-                setEV(EV + val);
-                let newEV = EV + val;
-                updateEVTotal(newEV, EVString);
-            } else if( val > 0 ){
-                let newVal = 252 - EV;
-                setTotalEVs(totalEVs + newVal);
-                setEV(252);
-                updateEVTotal(252, EVString);
-            } else {
-                let newVal = (-val) + (EV + val);
-                setTotalEVs(totalEVs - newVal);
-                setEV(0);
-                updateEVTotal(0, EVString);
-            }
+            helpHandleChangeEV(val, EV, setEV, EVString);
+        } else if (val > 0 && 510 - totalEVs) {
+            let newVal = 510 - totalEVs;
+            helpHandleChangeEV(newVal, EV, setEV, EVString);
+        } else if (val < 10) {
+            let newVal = -totalEVs;
+            helpHandleChangeEV(newVal, EV, setEV, EVString);
+        }
+    }
+
+    function helpHandleChangeEV(val, EV, setEV, EVString){
+        if (EV + val > -1 && EV + val < 253){
+            setTotalEVs(totalEVs + val);
+            setEV(EV + val);
+            let newEV = EV + val;
+            updateEVTotal(newEV, EVString);
+        } else if( val > 0 ){
+            let newVal = 252 - EV;
+            setTotalEVs(totalEVs + newVal);
+            setEV(252);
+            updateEVTotal(252, EVString);
+        } else {
+            let newVal = (-val) + (EV + val);
+            setTotalEVs(totalEVs - newVal);
+            setEV(0);
+            updateEVTotal(0, EVString);
         }
     }
 
