@@ -1,6 +1,7 @@
 import { useState } from "react";
+import * as UPokemonAPI from '../../utilities/user-pokemon-api'
 
-export default function PokemonEVDetail({pokemon}){
+export default function PokemonEVDetail({pokemon, saveId}){
     const [hpEV, setHPEV] = useState(pokemon.hpEV);
     const [atkEV, setAtkEV] = useState(pokemon.atkEV);
     const [defEV, setDefEV] = useState(pokemon.defEV);
@@ -10,21 +11,31 @@ export default function PokemonEVDetail({pokemon}){
 
     function changeHP(val){
         setHPEV(hpEV + val)
+        updateEVTotal(val, 'hpEV');
     }
     function changeAtk(val){
         setAtkEV(atkEV + val)
+        updateEVTotal(val, 'atkEV');
     }
     function changeDef(val){
         setDefEV(defEV + val)
+        updateEVTotal(val, 'defEV');
     }
     function changeSpAtk(val){
         setSpAtkEV(spatkEV + val)
+        updateEVTotal(val, 'spAtkEV');
     }
     function changeSpDef(val){
         setSpDefEV(spdefEV + val)
+        updateEVTotal(val, 'spDefEV');
     }
     function changeSpd(val){
         setSpdEV(spdEV + val)
+        updateEVTotal(val, 'spdEV');
+    }
+
+    async function updateEVTotal(value, stat){
+        const saveData = await UPokemonAPI.updatePokemonEV(saveId, pokemon._id, value, stat);
     }
 
     return (

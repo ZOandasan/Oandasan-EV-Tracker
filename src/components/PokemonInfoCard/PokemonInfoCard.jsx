@@ -22,7 +22,7 @@ export default function PokemonInfoCard({pokemon, saveId, setSavedPokemon}){
                 <>
                     <p>Dex: {pokemon.dexNo}: {pokemon.nickname} | Level: {pokemon.level}</p>
                     <div>  
-                        <PokemonEVDetail pokemon={pokemon}/>
+                        <PokemonEVDetail pokemon={pokemon} saveId={saveId}/>
                     </div>
                     <div><button onClick={() => setShowDelete(true)}>Delete Pokemon</button></div>
                     <div><button onClick={() => setOpenDetails(false)}>Hide Details</button></div>
@@ -42,7 +42,7 @@ export default function PokemonInfoCard({pokemon, saveId, setSavedPokemon}){
                 <>
                     <p>Dex: {pokemon.dexNo}: Pokemon Species | Level: {pokemon.level}</p>
                     <div>  
-                        <PokemonEVDetail pokemon={pokemon}/>
+                        <PokemonEVDetail pokemon={pokemon} saveId={saveId}/>
                     </div>
                     <button onClick={() => setOpenDetails(false)}>Hide Details</button>
                 </>
