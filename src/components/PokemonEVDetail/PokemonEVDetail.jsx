@@ -10,12 +10,35 @@ export default function PokemonEVDetail({pokemon, saveId}){
     const [spdEV, setSpdEV] = useState(pokemon.spdEV);
     const [totalEVs, setTotalEVs] = useState(hpEV + atkEV + defEV + spatkEV + spdefEV + spdEV)
 
+    function changeEV(val, EV, setEV, EVString){
+        if (totalEVs + val > -1 && totalEVs + val < 511){
+            if (EV + val > -1 && EV + val < 253){
+                setTotalEVs(totalEVs + val);
+                setEV(EV + val);
+                let newEV = EV + val;
+                updateEVTotal(newEV, EVString);
+            } else if( val > 0 ){
+                let newVal = 252 - EV;
+                setTotalEVs(totalEVs + newVal);
+                setEV(EV + val);
+                let newEV = EV + val;
+                updateEVTotal(newEV, EVString);
+            }
+        }
+    }
+
     function changeHP(val){
         if (totalEVs + val > -1 && totalEVs + val < 511){
             if (hpEV + val > -1 && hpEV + val < 253){
                 setTotalEVs(totalEVs + val);
                 setHPEV(hpEV + val);
                 let newEV = hpEV + val;
+                updateEVTotal(newEV, 'hpEV');
+            } else if( val > 0 ){
+                let newVal = 252 - hpEV;
+                setTotalEVs(totalEVs + newVal);
+                setHPEV(hpEV + newVal);
+                let newEV = hpEV + newVal;
                 updateEVTotal(newEV, 'hpEV');
             }
         }
