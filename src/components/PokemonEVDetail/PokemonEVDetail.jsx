@@ -15,7 +15,8 @@ export default function PokemonEVDetail({pokemon, saveId}){
             if (hpEV + val > -1 && hpEV + val < 253){
                 setTotalEVs(totalEVs + val);
                 setHPEV(hpEV + val);
-                updateEVTotal(hpEV, 'hpEV');
+                let newEV = hpEV + val;
+                updateEVTotal(newEV, 'hpEV');
             }
         }
     }
@@ -24,7 +25,8 @@ export default function PokemonEVDetail({pokemon, saveId}){
             if (atkEV + val > -1 && atkEV + val < 253){
                 setTotalEVs(totalEVs + val);
                 setAtkEV(atkEV + val)
-                updateEVTotal(atkEV, 'atkEV');
+                let newEV = atkEV + val;
+                updateEVTotal(newEV, 'atkEV');
             }
         }
     }
@@ -33,7 +35,8 @@ export default function PokemonEVDetail({pokemon, saveId}){
             if (defEV + val > -1 && defEV + val < 253){
                 setTotalEVs(totalEVs + val);
                 setDefEV(defEV + val)
-                updateEVTotal(defEV, 'defEV');
+                let newEV = defEV + val;
+                updateEVTotal(newEV, 'defEV');
             }
         }
     }
@@ -42,7 +45,8 @@ export default function PokemonEVDetail({pokemon, saveId}){
             if (spatkEV + val > -1 && spatkEV + val < 253){
                 setTotalEVs(totalEVs + val);
                 setSpAtkEV(spatkEV + val)
-                updateEVTotal(spatkEV, 'spAtkEV');
+                let newEV = spatkEV + val;
+                updateEVTotal(newEV, 'spAtkEV');
             }
         }
     }
@@ -50,8 +54,9 @@ export default function PokemonEVDetail({pokemon, saveId}){
         if (totalEVs + val > -1 && totalEVs + val < 511){
             if (spdefEV + val > -1 && spdefEV + val < 253){
                 setTotalEVs(totalEVs + val);
-                setSpDefEV(spdefEV + val)
-                updateEVTotal(spdefEV, 'spDefEV');
+                setSpDefEV(spdefEV + val);
+                let newEV = spdefEV + val;
+                updateEVTotal(newEV, 'spDefEV');
             }
         }
     }
@@ -60,7 +65,8 @@ export default function PokemonEVDetail({pokemon, saveId}){
             if (spdEV + val > -1 && spdEV + val < 253){
                 setTotalEVs(totalEVs + val);
                 setSpdEV(spdEV + val)
-                updateEVTotal(spdEV, 'spdEV');
+                let newEV = spdEV + val;
+                updateEVTotal(newEV, 'spdEV');
             }
         }
     }
