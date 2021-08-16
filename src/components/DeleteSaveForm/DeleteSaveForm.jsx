@@ -15,7 +15,6 @@ export default function DeleteSaveForm({id, setShowForm, setSavedGames, savedGam
       <form autoComplete="off" onSubmit={handleDelete}>
         <p>Are you sure you want to DELETE?</p>
         <button type="submit">Delete</button>
-        <button onClick={() => setShowForm(false)}>Cancel</button>
       </form>
     </div>
   );

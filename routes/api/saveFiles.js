@@ -9,7 +9,7 @@ router.post('/:id', saveFilesCtrl.showOne);
 router.delete('/delete/:id', saveFilesCtrl.deleteOne);
 router.post('/:id/pokemon/create/:species', pokemonCtrl.create);
 router.delete('/:saveId/pokemon/delete/:pokeId', pokemonCtrl.deleteOne);
-router.put('/:saveId/pokemon/update/:pokeId/:stat/:value', pokemonCtrl.editEV);
-router.put('/:saveId/pokemon/update/:pokeId/:level', pokemonCtrl.editLevel);
+router.put('/:saveId/pokemon/updateEV/:pokeId/:stat/:value', pokemonCtrl.editEV);
+router.put('/:saveId/pokemon/updateLevel/:pokeId/:level', pokemonCtrl.editLevel);
 
 module.exports = router;

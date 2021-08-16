@@ -17,6 +17,7 @@ export default function App() {
   const [user, setUser] = useState(getUser());
 
   return (
+    <>
     <main className="App">
       { user ?
         <>
@@ -38,14 +39,13 @@ export default function App() {
               <SettingsPage />
             </Route>
             <Route path="/account">
-              <AccountPage user={user}/>
+              <AccountPage user={user} setUser={setUser}/>
             </Route>
             <Route path="/details/:id">
               <PokemonDetailsPage />
             </Route>
             <Redirect to="/home" />
           </Switch>
-          <Footer />
         </>
         :
         <>
@@ -53,5 +53,9 @@ export default function App() {
         </>
       }
     </main>
+    <footer>
+      <Footer />
+    </footer>
+    </>
   );
 }

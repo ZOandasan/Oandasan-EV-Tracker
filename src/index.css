@@ -35,10 +35,21 @@ body {
   color: var(--white);
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--gray-1);
+  width: 100%;
+  text-align: center;
+}
+
+
 
 #root {
   height: 100%;
