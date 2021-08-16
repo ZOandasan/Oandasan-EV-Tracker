@@ -24,6 +24,7 @@ app.use(require('./config/checkToken'));
 app.use('/api/users', require('./routes/api/users'));
 const ensureLoggedIn = require('./config/ensureLoggedIn')
 app.use('/api/saveFiles', ensureLoggedIn, require('./routes/api/saveFiles'));
+app.use('https://pokeapi.co/api/v2/pokemon-species', ensureLoggedIn, require('./routes/api/pokeAPI'));
 
 
 

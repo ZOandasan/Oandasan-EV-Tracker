@@ -7,8 +7,9 @@ module.exports = {
 };
 
 async function create(req, res){
-    const saveFile = await SaveFile.findById(req.params.id)
+    const saveFile = await SaveFile.findById(req.params.id);
     saveFile.pokemon.push(req.body);
+    saveFile.pokemon['species'] = req.params.species; //Added This Line modeled after line 27. This is the issue.
     await saveFile.save();
     res.json(saveFile);
 }

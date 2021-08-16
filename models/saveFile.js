@@ -10,6 +10,11 @@ const pokemonSchema = new Schema({
         default: 25,
     },
     nickname: String,
+    species: {
+        type: String,
+        required: true,
+        default: 'Pikachu',
+    },
     level: {
         type: Number,
         min: 1,
