@@ -35,6 +35,9 @@ body {
   color: var(--white);
 }
 
+nav {
+  background-color: var(--gray-1);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

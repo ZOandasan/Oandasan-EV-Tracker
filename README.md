@@ -5,7 +5,7 @@ I wanted to create a site where people could track the pokemon in their pokemon 
 
 To accomplish this, I used the pokemon API to grab the existing data the pokemon company has. This allows me to  show all the pokemon in the national dex, as well as provide accurate pokemon species, types, abilities, movesets, and sprites.
 ### Link to the Site:
-
+https://oandasan-ev-tracker.herokuapp.com/home
 
 ### Technologies Used:
 HTML, CSS, Javascript, MongoDB, Mongoose, Express, React.js, Node.js, Pokemon API, Heroku, Github
@@ -15,9 +15,9 @@ https://trello.com/b/ocCq4kVK/oandasan-ev-tracker
 
 ### Next Steps:
 <ul>
-    <li>Add</li>
-    <li>Add</li>
-    <li>Add</li>
+    <li>Add Google API for an alternate Sign in.</li>
+    <li>Add in the ability to sort pokemon by categories.</li>
+    <li>Add in the ability to search for a pokemon by categories.</li>
 </ul>
 
 ### ERD:
