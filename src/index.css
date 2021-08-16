@@ -35,19 +35,20 @@ body {
   color: var(--white);
 }
 
-nav {
-  background-color: var(--gray-1);
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
 }
 
+nav {
+  background-color: var(--gray-2);
+}
+
 footer {
   position: fixed;
   bottom: 0;
-  background-color: var(--gray-1);
+  background-color: var(--gray-2);
   width: 100%;
   text-align: center;
 }
