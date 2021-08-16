@@ -13,3 +13,7 @@ export async function deletePokemon(saveId, pokeId) {
 export async function updatePokemonEV(saveId, pokeId, value, stat){
     return sendRequest(`${BASE_URL}/${saveId}/pokemon/update/${pokeId}/${stat}/${value}`, 'PUT');
 }
+
+export async function updatePokemonLevel(saveId, pokeId, newLevel){
+    return sendRequest(`${BASE_URL}/${saveId}/pokemon/update/${pokeId}/${newLevel}`, 'PUT');
+}

@@ -31,7 +31,9 @@ export default function NewPokemonForm ({setSavedPokemon, savedPokemon, setShowF
     
     async function classifyPokemon(dexNo){
       const pokemonSpecies = await PokeAPI.classifyPokemon(dexNo);
-      setSpecies(pokemonSpecies.name);
+      let lowName = pokemonSpecies.name;
+      const capitalName = lowName.charAt(0).toUpperCase() + lowName.slice(1);
+      setSpecies(capitalName);
     }
   
     async function handleSubmit (evt) {
@@ -39,8 +41,8 @@ export default function NewPokemonForm ({setSavedPokemon, savedPokemon, setShowF
       try {
         const formInfo = {...formData};
         const saveData = await createPokemon(formInfo, saveId, species);
+        setSavedPokemon(saveData);
         setShowForm(false);
-        setSavedPokemon([...savedPokemon, saveData]);
       } catch {
         setFormData({ error: 'Submission Failed - Try Again'});
       }
