@@ -3,9 +3,9 @@ import { createPokemon } from '../../utilities/user-pokemon-api'
 import * as PokeAPI from '../../utilities/PokeAPI';
 
 export default function NewPokemonForm ({setSavedPokemon, savedPokemon, setShowForm, saveId}) {
-    const [species, setSpecies] = useState('Unidentified Pokemon')
+    const [species, setSpecies] = useState('Pikachu')
     const [formData, setFormData] = useState({
-        dexNo: '',
+        dexNo: '25',
         nickname: '',
         level: '',
     });
