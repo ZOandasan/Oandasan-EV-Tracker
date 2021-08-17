@@ -15,7 +15,7 @@ export default function NationalDex() {
   let initSelect = [];
   for (let idx = 1; 42 > idx; ++idx){
     initSelect.push (
-      <option value={`${idx}`}>{idx}</option>
+      <option value={`${idx}`}>{(20*(idx - 1)) + 1}-{20*(idx)}</option>
     );
   }
 

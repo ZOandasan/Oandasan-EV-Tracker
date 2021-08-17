@@ -2,7 +2,11 @@
 export default function Footer(){
     return (
         <div className="footer">
-            <div>Thanks to <a href="https://pokeapi.co/">Pokemon API</a> for being awesome. -Olcra</div>
+            <span>Check out the Pokemon API <a href="https://pokeapi.co/">here</a>.</span>
+            &nbsp;|&nbsp;
+            <span>Terms of Service <a href="/account">here</a></span>
+            &nbsp;|&nbsp;
+            <span>Contact Us <a href="https://www.linkedin.com/in/zachary-oandasan/">here</a></span>
         </div>
     );
 }

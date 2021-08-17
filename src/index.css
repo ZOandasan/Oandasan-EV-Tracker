@@ -35,7 +35,6 @@ body {
   color: var(--white);
 }
 
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
@@ -50,67 +49,6 @@ footer {
   bottom: 0;
   background-color: var(--gray-2);
   width: 100%;
-  text-align: center;
-}
-
-
-
-#root {
-  height: 100%;
-}
-
-.align-ctr {
-  text-align: center;
-}
-
-.align-rt {
-  text-align: right;
-}
-
-.smaller {
-  font-size: smaller;
-}
-
-.flex-ctr-ctr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.flex-j-end {
-  justify-content: flex-end;
-}
-
-.scroll-y {
-  overflow-y: scroll;
-}
-
-.section-heading {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--gray-1);
-  color: var(--text-light);
-  border: .1vmin solid var(--gray-3);
-  border-radius: 1vmin;
-  padding: .6vmin;
-  text-align: center;
-  font-size: 2vmin;
-}
-
-.form-container {
-  padding: 3vmin;
-  background-color: var(--gray-1);
-  border: .1vmin solid var(--gray-3);
-  border-radius: 1vmin;
-}
-
-p.error-message {
-  color: var(--purple-dark);
   text-align: center;
 }
 
@@ -192,3 +130,63 @@ a:visited {
 input {
   color: black;
 }
+
+#root {
+  height: 100%;
+}
+
+.align-ctr {
+  text-align: center;
+}
+
+.align-rt {
+  text-align: right;
+}
+
+.smaller {
+  font-size: smaller;
+}
+
+.flex-ctr-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-j-end {
+  justify-content: flex-end;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--gray-1);
+  color: var(--text-light);
+  border: .1vmin solid var(--gray-3);
+  border-radius: 1vmin;
+  padding: .6vmin;
+  text-align: center;
+  font-size: 2vmin;
+}
+
+.form-container {
+  padding: 3vmin;
+  background-color: var(--gray-1);
+  border: .1vmin solid var(--gray-3);
+  border-radius: 1vmin;
+}
+
+p.error-message {
+  color: var(--purple-dark);
+  text-align: center;
+}
+

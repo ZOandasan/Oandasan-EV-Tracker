@@ -15,6 +15,10 @@ export default function AccountPage({user, setUser}){
                 <p>{user.email}</p>
                 <p>Not you? <Link to="" onClick={handleLogOut}>Log Out</Link></p>
             </div>
+            <div>
+                <h2>Terms of Service:</h2>
+                <p>Text Here:</p>
+            </div>
         </div>
     )
 }
