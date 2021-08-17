@@ -11,6 +11,8 @@
   --dis-button-hover-color: rgb(120, 20, 20);
   --link-color: rgb(50, 250, 50);
   --link-color-visited: rgb(150, 250, 50);
+
+  --TestColor: rgb(155, 200, 155);
 }
 
 *, *:before, *:after {
@@ -90,7 +92,6 @@ button, a.button {
 }
 
 button:hover, a.button:hover {
-  color: var(--text-color);
   background-color: var(--button-hover-color);
 }
 

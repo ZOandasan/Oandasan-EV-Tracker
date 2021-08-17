@@ -3,11 +3,11 @@ export default function SettingsPage(){
     
     function setLight(){
         document.documentElement.style.setProperty('--text-color', 'black');
-        document.documentElement.style.setProperty('--background-1', 'rgb(200, 255, 200)');
+        document.documentElement.style.setProperty('--background-1', 'rgb(155, 200, 155)');
         document.documentElement.style.setProperty('--background-2', 'rgb(110, 250, 110)');
         document.documentElement.style.setProperty('--background-3', 'rgb(160, 250, 160)');
         document.documentElement.style.setProperty('--background-4', 'rgb(255, 255, 255)');
-        document.documentElement.style.setProperty('--button-color:', 'rgb(30, 180, 30)');
+        document.documentElement.style.setProperty('--button-color:', 'rgb(130, 240, 130)');
         document.documentElement.style.setProperty('--button-hover-color', 'rgb(20, 120, 20)');
         document.documentElement.style.setProperty('--dis-button-color:', 'rgb(240, 20, 20)');
         document.documentElement.style.setProperty('--dis-button-hover-color', 'rgb(180, 30, 30)');
