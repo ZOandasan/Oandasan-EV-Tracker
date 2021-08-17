@@ -200,3 +200,12 @@ p.error-message {
   padding: 3vmin;
   margin: 3vmin;
 }
+
+.settings {
+  background-color: var(--background-3);
+  border: 1vmin solid var(--background-1);
+  border-radius: 1vmin;
+  padding: 3vmin;
+  margin: 3vmin;
+  height: 80%;
+}
