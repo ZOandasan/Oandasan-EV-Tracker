@@ -18,6 +18,13 @@ https://trello.com/b/ocCq4kVK/oandasan-ev-tracker
     <li>Add Google API for an alternate Sign in.</li>
     <li>Add in the ability to sort pokemon by categories.</li>
     <li>Add in the ability to search for a pokemon by categories.</li>
+    <li>Add in the ability to edit pokemon species through evolution.</li>
+    <li>Add in the ability to edit pokemon nicknames.</li>
+    <li>Add in the ability to change font size in settings.</li>
+    <li>Add in the ability to change to a light mode in settings.</li>
+    <li>Add in the ability to edit my logged in profile.</li>
+    <li>Add in the ability to select from a number of profile pictures. (The Starters)</li>
+    <li>Add in the ability to see other peoples pokemon to see what other people bleieve is optimal EVs.</li>
 </ul>
 
 ### ERD:
