@@ -6,7 +6,7 @@ export default function GameTableItem({ saveFile, selected, changeSelected }){
         return (
             <div
             className="GameTableItem" 
-            style={{border:" 3px solid white"}}
+            style={{border:" 1vmin solid white"}}
             onClick={() => changeSelected(saveFile._id)}>
                 <GameTableItemCard saveFile={saveFile} region={saveFile.region} generation={saveFile.generation} nuzlock={saveFile.isNuzlock}/>
             </div>

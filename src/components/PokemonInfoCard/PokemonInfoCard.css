@@ -1,8 +1,7 @@
 .pokemon-card {
-    background-color: var(--gray-1);
-    border: .1vmin solid var(--gray-3);
+    background-color: var(--background-1);
+    border: 1vmin solid rgb(10, 70, 10);
     border-radius: 2vmin;
-    margin: 3vmin 0;
     padding: 3vmin;
-    overflow-y: scroll;
+    margin: 3vmin;
 }

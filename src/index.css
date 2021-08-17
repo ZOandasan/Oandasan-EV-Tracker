@@ -1,21 +1,16 @@
 /* CSS Custom Properties */
 :root {
-  --text-light: rgba(230, 230, 230, 1);
-  --text-dark: #615954;
-  --black: black;
-  --white: white;
-  --gray-1: rgb(20, 20, 30);
-  --gray-2: rgb(30, 30, 40);
-  --gray-3: rgb(40, 40, 50);
-  --gray-4: rgb(80, 80, 100);
-  --green-dark: rgb(20, 120, 20);
-  --green-light: rgb(30, 230, 30);
-  --purple-dark: rgb(100, 20, 100);
-  --purple-light: rgb(150, 30, 150);
-  --yellow-light: rgb(220, 220, 50);
-  --yellow-dark: rgb(180, 180, 0);
-  --crimson: rgb(120, 20, 50);
-
+  --background-1: rgb(20, 20, 30);
+  --background-2: rgb(30, 30, 40);
+  --background-3: rgb(40, 40, 50);
+  --background-4: rgb(80, 80, 100);
+  --text-color: white;
+  --button-color: rgb(20, 120, 20);
+  --button-hover-color: rgb(30, 80, 30);
+  --dis-button-color: rgb(180, 30, 30);
+  --dis-button-hover-color: rgb(120, 20, 20);
+  --link-color: rgb(50, 250, 50);
+  --link-color-visited: rgb(150, 250, 50);
 }
 
 *, *:before, *:after {
@@ -24,15 +19,15 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--gray-4);
-  padding: 2vmin;
+  background-color: var(--background-4);
   height: 100vh;
-  color: var(--white);
+  color: var(--text-color);
 }
 
 code {
@@ -41,13 +36,13 @@ code {
 }
 
 nav {
-  background-color: var(--gray-2);
+  background-color: var(--background-2);
 }
 
 footer {
   position: fixed;
   bottom: 0;
-  background-color: var(--gray-2);
+  background-color: var(--background-2);
   width: 100%;
   text-align: center;
 }
@@ -68,35 +63,35 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--gray-3);
+  border: .1vmin solid var(--background-3);
   border-radius: .5vmin;
-  color: var(--text-light);
+  color: var(--text-color);
   background-image: none !important;
   outline: none;
 }
 
 input:focus {
-  border-color: var(--purple-dark);
+  border-color: rgb(100, 20, 100);
 }
 
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
-  color: var(--green-light);
-  background-color: var(--purple-dark);
+  color: var(--text-color);
+  background-color: var(--button-color);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--gray-2);
+  border: .1vmin solid var(--background-2);
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
 }
 
 button:hover, a.button:hover {
-  color: var(--green-light);
-  background-color: var(--purple-light);
+  color: var(--text-color);
+  background-color: var(--button-hover-color);
 }
 
 button.btn-sm {
@@ -111,7 +106,7 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--crimson);
+  background-color: var(--dis-button-color);
 }
 
 button[type="submit"] {
@@ -120,11 +115,11 @@ button[type="submit"] {
 }
 
 a {
-  color: var(--green-light);
+  color: var(--link-color);
 }
 
 a:visited {
-  color: var(--yellow-light);
+  color: var(--link-color-visited);
 }
 
 input {
@@ -169,9 +164,9 @@ input {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--gray-1);
+  background-color: var(--background-1);
   color: var(--text-light);
-  border: .1vmin solid var(--gray-3);
+  border: .1vmin solid var(--background-3);
   border-radius: 1vmin;
   padding: .6vmin;
   text-align: center;
@@ -180,13 +175,28 @@ input {
 
 .form-container {
   padding: 3vmin;
-  background-color: var(--gray-1);
-  border: .1vmin solid var(--gray-3);
+  background-color: var(--background-1);
+  border: .1vmin solid var(--background-3);
   border-radius: 1vmin;
 }
 
 p.error-message {
-  color: var(--purple-dark);
+  color: var(--dis-button-color);
   text-align: center;
 }
 
+.para {
+  background-color: var(--background-2);
+  border: 1vmin solid var(--background-3);
+  border-radius: 1vmin;
+  padding: 3vmin;
+  margin: 3vmin;
+}
+
+.head {
+  background-color: var(--background-2);
+  border: 1vmin solid var(--dis-button-hover-color);
+  border-radius: 1vmin;
+  padding: 3vmin;
+  margin: 3vmin;
+}
