@@ -1,5 +1,6 @@
 import { useState } from "react";
 import * as UPokemonAPI from '../../utilities/user-pokemon-api'
+import './pokemonEV.css'
 
 export default function PokemonEVDetail({pokemon, saveId}){
     const [hpEV, setHPEV] = useState(pokemon.hpEV);
@@ -71,43 +72,74 @@ export default function PokemonEVDetail({pokemon, saveId}){
 
     return (
     <>
-        <div>
+        <div className="EV">
             <span>
-                <button onClick={() => changeHP(10)}>+10</button>
-                <button onClick={() => changeHP(1)}>+1</button>
-                HP: {hpEV}
-                <button onClick={() => changeHP(-1)}>-1</button>
-                <button onClick={() => changeHP(-10)}>-10</button>
-            <br/> 
-                <button onClick={() => changeAtk(10)}>+10</button>
-                <button onClick={() => changeAtk(1)}>+1</button>
-                ATK: {atkEV}
-                <button onClick={() => changeAtk(-1)}>-1</button>
-                <button onClick={() => changeAtk(-10)}>-10</button>
-            <br/> 
-                <button onClick={() => changeDef(10)}>+10</button>
-                <button onClick={() => changeDef(1)}>+1</button>
-                DEF: {defEV}
-                <button onClick={() => changeDef(-1)}>-1</button>
-                <button onClick={() => changeDef(-10)}>-10</button>
-            <br/> 
-                <button onClick={() => changeSpAtk(10)}>+10</button>
-                <button onClick={() => changeSpAtk(1)}>+1</button>
-                Sp.ATK: {spatkEV}
-                <button onClick={() => changeSpAtk(-1)}>-1</button>
-                <button onClick={() => changeSpAtk(-10)}>-10</button>
-            <br/> 
-                <button onClick={() => changeSpDef(10)}>+10</button>
-                <button onClick={() => changeSpDef(1)}>+1</button>
-                Sp.Def: {spdefEV}
-                <button onClick={() => changeSpDef(-1)}>-1</button>
-                <button onClick={() => changeSpDef(-10)}>-10</button>
-            <br/> 
-                <button onClick={() => changeSpd(10)}>+10</button>
-                <button onClick={() => changeSpd(1)}>+1</button>
-                SPD: {spdEV}
-                <button onClick={() => changeSpd(-1)}>-1</button>
-                <button onClick={() => changeSpd(-10)}>-10</button>
+                <div className="EVdiv">
+                    <div>
+                        <button onClick={() => changeHP(10)}>+10</button>
+                        <button onClick={() => changeHP(1)}>+1</button>
+                    </div>
+                    <span className="EVText">HP: {hpEV}</span>
+                    <div>
+                        <button onClick={() => changeHP(-1)}>-1</button>
+                        <button onClick={() => changeHP(-10)}>-10</button>
+                    </div>
+                </div>
+                <div className="EVdiv">
+                    <div>
+                        <button onClick={() => changeAtk(10)}>+10</button>
+                        <button onClick={() => changeAtk(1)}>+1</button>
+                    </div>
+                    <span className="EVText">ATK: {atkEV}</span>
+                    <div>
+                        <button onClick={() => changeAtk(-1)}>-1</button>
+                        <button onClick={() => changeAtk(-10)}>-10</button>
+                    </div>
+                </div>
+                <div className="EVdiv">
+                    <div>
+                        <button onClick={() => changeDef(10)}>+10</button>
+                        <button onClick={() => changeDef(1)}>+1</button>
+                    </div>
+                    <span className="EVText">DEF: {defEV}</span>
+                    <div>
+                        <button onClick={() => changeDef(-1)}>-1</button>
+                        <button onClick={() => changeDef(-10)}>-10</button>
+                    </div>
+                </div>
+                <div className="EVdiv">
+                    <div>
+                        <button onClick={() => changeSpAtk(10)}>+10</button>
+                        <button onClick={() => changeSpAtk(1)}>+1</button>
+                    </div>
+                    <span className="EVText">Sp.ATK: {spatkEV}</span>
+                    <div>
+                        <button onClick={() => changeSpAtk(-1)}>-1</button>
+                        <button onClick={() => changeSpAtk(-10)}>-10</button>
+                    </div>
+                </div>
+                <div className="EVdiv">
+                    <div>
+                        <button onClick={() => changeSpDef(10)}>+10</button>
+                        <button onClick={() => changeSpDef(1)}>+1</button>
+                    </div>
+                    <span className="EVText">Sp.Def: {spdefEV}</span>
+                    <div>
+                        <button onClick={() => changeSpDef(-1)}>-1</button>
+                        <button onClick={() => changeSpDef(-10)}>-10</button>
+                    </div>
+                </div>
+                <div className="EVdiv">
+                    <div>
+                        <button onClick={() => changeSpd(10)}>+10</button>
+                        <button onClick={() => changeSpd(1)}>+1</button>
+                    </div>
+                    <span className="EVText">SPD: {spdEV}</span>
+                    <div>
+                        <button onClick={() => changeSpd(-1)}>-1</button>
+                        <button onClick={() => changeSpd(-10)}>-10</button>
+                    </div>
+                </div> 
             </span>
         </div>
     </>

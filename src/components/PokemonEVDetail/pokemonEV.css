@@ -1,0 +1,13 @@
+.EV {
+    display: flex;
+    justify-content: center;
+}
+
+.EVdiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.EVText {
+    padding: 1vmin;
+}
