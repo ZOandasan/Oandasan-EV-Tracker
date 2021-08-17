@@ -1,6 +1,6 @@
 .GameTableItem {
     background-color: var(--background-1);
-    border: 1vmin solid var(--background-3);
+    border: 1vmin solid var(--text-color);
     border-radius: 2vmin;
     padding: 3vmin;
     margin: 3vmin;

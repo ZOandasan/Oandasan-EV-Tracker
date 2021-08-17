@@ -1,10 +1,10 @@
 /* CSS Custom Properties */
 :root {
+  --text-color: white;
   --background-1: rgb(20, 20, 30);
   --background-2: rgb(30, 30, 40);
   --background-3: rgb(40, 40, 50);
   --background-4: rgb(80, 80, 100);
-  --text-color: white;
   --button-color: rgb(20, 120, 20);
   --button-hover-color: rgb(30, 80, 30);
   --dis-button-color: rgb(180, 30, 30);
@@ -194,7 +194,7 @@ p.error-message {
 }
 
 .head {
-  background-color: var(--background-2);
+  background-color: var(--background-3);
   border: 1vmin solid var(--dis-button-hover-color);
   border-radius: 1vmin;
   padding: 3vmin;
@@ -202,8 +202,8 @@ p.error-message {
 }
 
 .settings {
-  background-color: var(--background-3);
-  border: 1vmin solid var(--background-1);
+  background-color: var(--background-1);
+  border: 1vmin solid var(--background-3);
   border-radius: 1vmin;
   padding: 3vmin;
   margin: 3vmin;
