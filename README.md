@@ -31,3 +31,6 @@ https://trello.com/b/ocCq4kVK/oandasan-ev-tracker
 <td> <img src="https://i.imgur.com/9abTOJO.png" width:"450"> </td>
 
 ### Screenshots:
+<td><img src="https://i.imgur.com/V6JVtrt.png" width:"450"></td>
+<td><img src="https://i.imgur.com/USD8d6o.png" width:"450"></td>
+<td><img src="https://i.imgur.com/gVqGRcO.png" width:"450"></td>
